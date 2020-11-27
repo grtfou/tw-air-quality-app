@@ -1,5 +1,5 @@
 /* Taiwan air quality App for MacOS
- * LastUpdate: 200416
+ * LastUpdate: 201127
  */
 
 package main
@@ -18,9 +18,11 @@ import (
 )
 
 // Query data frequencies
-const refreshTime = time.Hour
-const url = "http://opendata2.epa.gov.tw/AQI.json"
-const website = "https://airtw.epa.gov.tw/CHT/EnvMonitoring/Central/CentralMonitoring.aspx"
+const (
+	refreshTime = time.Hour
+	url         = "http://opendata2.epa.gov.tw/AQI.json"
+	website     = "https://airtw.epa.gov.tw/CHT/EnvMonitoring/Central/CentralMonitoring.aspx"
+)
 
 var (
 	textAQI        string
@@ -130,7 +132,7 @@ func refreshMenu(airInf map[string]gjson.Result) {
 	}
 	// 2nd menu bar: Updated time
 	updateTime = fmt.Sprintf(
-		"Updated:%s", time.Now().Format("01-02 03:04:05"))
+		"Updated:%s", time.Now().Format("01-02 15:04:05"))
 }
 
 func timerAQI() {
