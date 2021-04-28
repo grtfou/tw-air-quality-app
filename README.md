@@ -1,7 +1,7 @@
 # tw-air-quality-app
 Taiwan air quality MacOS App by Go
 
-![Example](./data/screenshot.png)
+![Example](./TWAirQuality.app/screenshot.png)
 
 ## Requirement
   * Go >= 1.13
