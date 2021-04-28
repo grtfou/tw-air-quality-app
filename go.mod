@@ -1,6 +1,6 @@
 module air
 
-go 1.15
+go 1.16
 
 require (
 	github.com/caseymrm/menuet v1.0.1
